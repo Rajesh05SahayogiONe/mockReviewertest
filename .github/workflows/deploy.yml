@@ -1,0 +1,31 @@
+name: Deploy
+
+# Triggered on demand — this is what the Code Review Platform's "Deploy" button
+# calls (GitHub App -> createWorkflowDispatch). Runs on the self-hosted runner.
+on:
+  workflow_dispatch:
+    inputs:
+      product:
+        description: Product to deploy
+        required: true
+        type: choice
+        options: [boss, setu, tax]
+      environment:
+        description: Target environment
+        required: true
+        default: staging
+        type: choice
+        options: [staging, production]
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: [self-hosted]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy
+        run: |
+          echo "Deploying '${{ inputs.product }}' to '${{ inputs.environment }}' (sandbox)"
+          echo "In the real repo this step would run the product's deploy (Azure/ACR/ACA)."

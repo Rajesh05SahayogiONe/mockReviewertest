@@ -1,0 +1,9 @@
+{
+  "name": "sahayogi-ci-sandbox",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Throwaway sandbox monorepo to validate self-hosted runners + the Code Review Platform before touching the real sahayogi_one repo.",
+  "scripts": {
+    "ci": "node scripts/ci.mjs"
+  }
+}

@@ -1,0 +1,6 @@
+node_modules/
+*.log
+.env
+.DS_Store
+# self-hosted runner install dir, if placed inside the repo
+actions-runner/

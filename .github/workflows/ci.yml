@@ -1,0 +1,39 @@
+name: CI
+
+# Mirrors sahayogi_one/ci.yml triggers (PR + push to main) but runs on YOUR
+# self-hosted runner instead of GitHub-hosted ubuntu-24.04 — so it consumes
+# ~zero GitHub Actions minutes.
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    # THE change that saves cost: self-hosted, not ubuntu-24.04.
+    runs-on: [self-hosted]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Where am I running?
+        run: |
+          echo "Runner name : $RUNNER_NAME"
+          echo "Runner OS   : $RUNNER_OS"
+          node --version
+
+      - name: Lint
+        run: echo "lint passed (sandbox)"
+
+      - name: Typecheck
+        run: echo "typecheck passed (sandbox)"
+
+      - name: Test
+        run: echo "tests passed (sandbox)"
+
+      - name: Build products
+        run: node scripts/ci.mjs
