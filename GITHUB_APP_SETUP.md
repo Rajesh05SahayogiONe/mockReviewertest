@@ -19,8 +19,8 @@ Your webhook URL will be: `https://<tunnel-host>/code-review/webhook`
 
 ## 2. Create the App
 
-GitHub → your **profile (or org) → Settings → Developer settings → GitHub Apps →
-New GitHub App**.
+GitHub → your **personal profile → Settings → Developer settings → GitHub Apps →
+New GitHub App** (use your personal account, **not** the OfficeSahayogi org).
 
 - **Name:** e.g. `sahayogi-code-review` (must be globally unique)
 - **Homepage URL:** anything (e.g. your tunnel URL)
