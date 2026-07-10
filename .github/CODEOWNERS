@@ -1,16 +1,16 @@
-# CODEOWNERS — who must review changes to each path. LAST matching rule wins.
-# Enforcement (blocking merge) comes from branch protection "require code owner
-# review" — this file only says WHO reviews.
+# CODEOWNERS — who must REVIEW changes to each path (last matching rule wins).
+# This blocks MERGING without the owner's approval; it does not block editing
+# or pushing a branch. Enforcement = branch protection "require code owner review".
 
-# Fallback owner
+# Rajesh owns everything by default (admin — can review/merge anything)
 *                     @Rajesh05SahayogiONe
 
-# Per-product ownership
+# Product lanes
 /apps/boss/**         @Rajesh05SahayogiONe
 /apps/setu/**         @Mehulg05
-/apps/tax/**          @Rajesh05SahayogiONe
+/apps/tax/**          @kanishka-garg817
 
-# CI + this governance file itself (so its rules can't be changed unreviewed)
+# CI + the governance file itself
 /.github/**           @Rajesh05SahayogiONe
 /.github/CODEOWNERS   @Rajesh05SahayogiONe
 
