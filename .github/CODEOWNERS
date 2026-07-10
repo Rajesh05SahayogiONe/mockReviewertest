@@ -1,0 +1,22 @@
+# CODEOWNERS — sample for the internal code-review platform (Phase C1/C2 demo).
+#
+# Format: <path pattern>  <owner(s)>.  The LAST matching rule wins.
+# Note: on this personal repo only @Rajesh05SahayogiONe is a valid reviewer;
+# team owners (@org/team) resolve only when the App is installed on an org.
+
+# Fallback owner for anything not matched below
+*                     @Rajesh05SahayogiONe
+
+# Per-product ownership (monorepo: apps/<product>)
+/apps/boss/**         @Rajesh05SahayogiONe
+/apps/setu/**         @Rajesh05SahayogiONe
+/apps/tax/**          @Rajesh05SahayogiONe
+
+# CI / workflow definitions
+/.github/**           @Rajesh05SahayogiONe
+
+# Build / release scripts
+/scripts/**           @Rajesh05SahayogiONe
+
+# Documentation
+*.md                  @Rajesh05SahayogiONe
