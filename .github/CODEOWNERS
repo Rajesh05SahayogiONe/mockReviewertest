@@ -1,0 +1,18 @@
+# CODEOWNERS — who must REVIEW changes to each path (last matching rule wins).
+# This blocks MERGING without the owner's approval; it does not block editing
+# or pushing a branch. Enforcement = branch protection "require code owner review".
+
+# Rajesh owns everything by default (admin — can review/merge anything)
+*                     @Rajesh05SahayogiONe
+
+# Product lanes
+/apps/boss/**         @Rajesh05SahayogiONe
+/apps/setu/**         @Mehulg05
+/apps/tax/**          @kanishka-garg817
+
+# CI + the governance file itself
+/.github/**           @Rajesh05SahayogiONe
+/.github/CODEOWNERS   @Rajesh05SahayogiONe
+
+/scripts/**           @Rajesh05SahayogiONe
+*.md                  @Rajesh05SahayogiONe
