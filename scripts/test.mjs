@@ -20,7 +20,7 @@ console.log('Test: apps/boss/web/src/index.js exports surface "web"');
 // BUG (on purpose): the source exports surface = "web", but this test now
 // expects "mobile" — so it fails, producing a clear CI failure to inspect.
 assert.ok(
-  bossWeb.includes("surface = 'mobile'"),
+  bossWeb.includes("surface = 'web'"),
   'apps/boss/web/src/index.js: expected surface = "mobile" but the file exports "web"',
 );
 
