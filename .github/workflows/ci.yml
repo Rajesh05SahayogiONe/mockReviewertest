@@ -33,7 +33,7 @@ jobs:
         run: echo "typecheck passed (sandbox)"
 
       - name: Test
-        run: echo "tests passed (sandbox)"
+        run: node scripts/test.mjs
 
       - name: Build products
         run: node scripts/ci.mjs
